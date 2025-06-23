@@ -62,3 +62,129 @@ section{
     justify-content: center;
     align-items: center;
 }
+
+.transition{
+    transition: background-color 1s;
+}
+
+.transition:hover{
+    background-color: #ff0000;
+}
+
+.transition-size:hover{
+   transform: scale(1.5); 
+
+}
+
+.transition-rotate{
+    transition: transform 0.5s; 
+}
+.transition-rotate:hover{
+    transform: rotateY(360deg);/*Valor rotate, pode rotacionar nos eixos Y,X e Z. Acompnahado dos graus entre parentezes(90deg).*/
+}
+
+.transition-delay{
+transition: width 1s 0.5s, height 1s;
+ 
+}
+
+.transition-delay:hover{
+    width: 200px;
+    height: 200px;
+}
+
+.transition-checkbox{
+   width: 50px; 
+   height: 50px;
+   margin-right: 50px;
+   transition: transform 0.5s;
+}
+
+.transition-checkbox:checked{
+    transform: rotate(360deg);
+}
+
+.transitionRadio{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    transition: transform 0.5s;
+}
+
+.transitionRadio:checked{
+    transform: scale(2);
+}
+
+.transitionText{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.transitionText:focus{
+    transform:scale(0.5) scaleX(0.7) rotateZ(180deg);
+}
+
+.animationFade{
+    animation: fadeIn 4s linear infinite; /* Nome da Keyframer e tempo.*/
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0; /* Opacidade inicial.*/
+    }
+    to{
+        opacity: 1; /* Opacidade final.*/
+    }
+}
+
+.animationFadeOut{
+    animation: fadeIn 4s linear infinite;
+    animation-direction:reverse;
+}
+
+.animationFadeInOut{
+    animation: fadeInOut 5s linear infinite;
+}
+
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:0.25 ;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.animationSpinner{
+    animation:rotate 4s linear infinite;
+}
+
+.animationEase{
+    animation:rotate 4s ease infinite;
+}
+
+.animationEaseOut{
+    animation:rotate 4s ease-out infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateZ(0deg); 
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
